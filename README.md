@@ -86,30 +86,8 @@ class AppKernel extends Kernel
 
 # Signature/Encryption Algorithms
 
-This bundle only installs the RSA based signature algorithms (`RS256`, `RS384` and `RS512`).
-If you need other signature algorithms (e.g EC based, HMAC) or if you want to use the encryption feature,
-you must install the corresponding packages:
-
-* Signature Algorithms
-    * All: `composer require web-token/signature-pack` (not recommended)
-    * HMAC: `composer require web-token/jwt-signature-algorithm-hmac`
-    * ECDSA: `composer require web-token/jwt-signature-algorithm-ecdsa`
-    * EdDSA: `composer require web-token/jwt-signature-algorithm-eddsa`
-    * None: `composer require web-token/jwt-signature-algorithm-none` (not recommended)
-    * Experimental: `composer require web-token/jwt-signature-algorithm-experimental` (not recommended)
-* Encryption Algorithms
-    * All: `composer require web-token/encryption-pack` (not recommended)
-    * Key Encryption:
-        * ECDH-ES: `composer require web-token/jwt-encryption-algorithm-ecdh-es`
-        * AES Key Wrapping: `composer require web-token/jwt-encryption-algorithm-aeskw`
-        * RSA: `composer require web-token/jwt-encryption-algorithm-rsa`
-        * AES GCM Key Wrapping: `composer require web-token/jwt-encryption-algorithm-aesgcmkw`
-        * Direct: `composer require web-token/jwt-encryption-algorithm-dir` (not recommended)
-        * PBES 2: `composer require web-token/jwt-encryption-algorithm-pbes2` (not recommended)
-    * Content Encryption:
-        * AES GCM: `composer require web-token/jwt-encryption-algorithm-aesgcm`
-        * AES CBC: `composer require web-token/jwt-encryption-algorithm-aescbc`
-    * Experimental: `composer require web-token/jwt-encryption-algorithm-experimental` (not recommended)
+This bundle only installs the main algorithms contained in `web-token/jwt-library`.
+If you need experimental signature or encryption algorithms, you must install the `web-token/jwt-experimental` library.
 
 # Configuration
 
